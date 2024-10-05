@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <title>AboutUS</title>
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Karla:wght@200&family=Playfair+Display&display=swap');
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'bullbeer.png' %}" alt="" height="30">
+        Share Market
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Documentation">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/aboutus">About</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-outline-success me-md-2"><a href="/Signin"> Signin</a></button>
+      <button type="button" class="btn btn-outline-danger"><a href="/Signup"> Signup</a></button>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8">
+        <p class="text-start"><Strong style="font-size: xx-large;">About</Strong></p>
+        <p class="text-start" style="font-size:larger; font-family: 'Cabin', sans-serif;">This Is Indian
+          ShareMarket/StockMarket Where You Can Get The Data Of NSE and BSE Data.This Project Is Under Beta Progress If
+          You
+          Have Any Query or Dought You Can Contactus.
+          Here You Can BUY or SELL Stock And Even You Can Withdraw To The Bank.This Project Was For Educational Purpose
+          And
+          It Provides The Use With The Experience How The Market Runs.This Project Fetch Live Data Of The Stocks And You
+          Can
+          Watched The Market or Participate In.</p>
+        <p class="text-start" style="font-size:larger; font-family: 'Cabin', sans-serif;">This Project Will Have
+          Additional Feature On Future.Due To Pandemic Lot of People Had Interest In Market and Even Don't Have
+          Knowledge
+          About it,Basically We Create a Separate Blog Section Where User Can Get Information About the Market And Place
+          According To Their Heart's Content. </p>
+        <p class="text-start" style="font-size:larger; font-family: 'Cabin', sans-serif;">To Get Our Latest and
+          Information News Get Connected To Our Social Media:</p>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-github"></i>
+        <i class="bi bi-linkedin"></i>
+        <i class="bi bi-whatsapp"></i>
+      </div>
+      <div class="col-4">
+        <img src="{% static 'us.jpg' %}"  class="img-fluid" alt="...">
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        p{
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body class="text-center">
+    <div class="text-center mt-5">
+        <form method="post" action="Signup" style="max-width:400px;margin:auto;">
+            {% csrf_token %}
+            <img src="{% static 'bullbeer.png' %}" alt="" height="57" width="72" class="mb-4">
+            <h3><strong>Please Signup</strong></h3>
+                <div class="form-floating">
+                    <input type="text" name="first_name" class="form-control" id="floatingInput"
+                        placeholder="first_name" required><label for="floatingInput">Enter firstname</label><br>
+                </div>
+                <div class="form-floating">
+                    <input type="text" name="last_name" class="form-control" id="floatingInput" placeholder="last_name"
+                        required><label for="floatingInput">Enter lastname</label><br>
+                </div>
+                <div class="form-floating">
+                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="username"
+                        required><label for="floatingInput">Enter Username</label><br>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password1" class="form-control" id="floatingInput"
+                        placeholder="password" required><label for="floatingInput">Enter password</label><br>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password2" class="form-control" id="floatingInput"
+                        placeholder="password" required><label for="floatingInput">Enter confirm password</label><br>
+                </div>
+                <div class="form-floating">
+                    <input type="email" name="email" class="form-control" id="floatingInput" placeholder="email"
+                        required><label for="floatingInput">Enter email</label><br>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Signup</button>
+                <p class="text-start">If you already have a acoount<a href="/Signin"> Login Here</a></p>
+            </form>
+            <div>
+                {% for message in messages %}
+                <h3>{{message}}</h3>
+                {% endfor %}
+            </div>
+         </div>
+
+
+</body>
+
+</html>

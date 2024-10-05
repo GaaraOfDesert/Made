@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title></title>
+</head>
+<h1></h1>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="{% static 'bullbeer.png' %}" alt="" height="30">
+              Share Market
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Documentation">Documentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus">About</a>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="btn btn-outline-success me-md-2"><a href="/Signin"> Signin</a></button>
+          <button type="submit" class="btn btn-outline-danger"><a href="/Signup"> Signup</a></button>
+          
+    </nav>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'nifty-sensex.jpg' %}" class="d-block w-100" alt="...">
+          <h1 class="text-center">Sensex and Nifty</h1>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'sensuid.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'senup.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'crk.png' %}" alt="" height="25">
+            What are BSE and NSE ?
+          </a>
+          <p class="text-start">BSE is short for the ‘Bombay Stock Exchange’. Founded in 1875, BSE is the first and one of the largest securities markets based out of Bombay in India. NSE is short for the ‘National Stock Exchange’. Founded much later than BSE in 1972, and offers a country-wide stock market similar to BSE. While BSE is older, NSE is larger with a greater number of daily trades occurring on it and a higher turnover rate.</p>
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'crk.png' %}" alt="" height="25">
+            What are Sensex and Nifty?
+          </a>
+          <p class="text-start">While BSE and NSE are stock markets, both Sensex and Nifty are stock market indices. A stock market index statistically summarises the movements of the market in real-time. A stock market index is created by selecting similar kinds of stock from a market or exchange and grouping them together. Sensex, which stands for ‘Stock Exchange Sensitive Index’, is the stock market index for the Bombay Stock Exchange. It calculates the movement on BSE. Nifty stands for ‘National Stock Exchange Fifty’ and is the index for the National Stock Exchange.</p>
+        </div>
+        <div class="col-4">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'crk.png' %}" alt="" height="25">
+            Types of Stock Market Indices:
+          </a>
+          <p class="text-start">There are a variety of stock market indices in India. These are the notable ones you might have heard of before:</p>
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-arrow-right"></i>
+            Benchmark Index:
+          </a>
+          <p class="text-start">The principal metric of viewing market movements as it indicates the performance of the whole market. It is a comparative statistical measure meaning it displays the amount earned by the average fund on the market versus the amount it should have earned. eg: BSE Sensex, NSE Nifty (Nifty 50).</p>
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-arrow-right"></i>
+            Broad Market Index:
+          </a>
+          <p class="text-start">They are benchmark indices, but tend to corroborate more stocks into the index. eg: BSE 100. BSE Sensex aggregates the movements of 30 biggest financially sound Indian companies listed on BSE. BSE 100 does the same for the top 100 biggest companies.</p>
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-arrow-right"></i>
+            Market Capitalization Index:
+          </a>
+          <p class="text-start">An index where companies’ components are measured with respect to the total market value (capitalization) of their outstanding shares. eg: BSE Smallcap, BSE Midcap</p>
+          <a class="navbar-brand" href="#">
+              <i class="bi bi-arrow-right"></i>
+              Sectoral or Industry-based Index:
+          </a>
+          <p class="text-start">Giving benchmarks and summaries of the performance of stocks in certain industries like healthcare, energy, industrial goods, technology, etc. CNX IT, Nifty FMCG Index.</p>
+        </div>
+        <div class="col-4">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'crk.png' %}" alt="" height="25">
+            Conclusion
+          </a>
+          <p class="text-start">Sensex and Nifty are essential to buy and sell stocks on BSE and NSE respectively while using your trading account. There are a variety of indices that summarise stock performance based on sector, company size, and other features. Indices help to pick stocks faster, discover the underlying sentiments of investors, and aid in convenient passive investing.
+             Another important step to take before you begin your trading journey is to open trading account. For those who are unaware of the meaning of a trading account, an online trading account allows one to access BSE and NSE to buy or sell stocks using the stock market indices like Sensex and Nifty as their guide. Once you’ve opened your trading account, you can trade with relative ease and flexibility. Happy trading!</p>
+        </div>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <p>&copy;2022 Company,Inc</p>
+          </div>
+          <div class="col-4">
+            <img src="{% static 'bullbeer.png' %}" height="30" width="24" class="d-flex align-items-center">
+          </div>
+          <div class="col-4">
+            <p class="text-end">Get connected to our social media:<br>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

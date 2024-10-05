@@ -1,0 +1,49 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title></title>
+</head>
+<body>
+    <div class="text-center mt-5">
+            <form method="post" action="Signin" style="max-width:400px;margin:auto;">
+                {% csrf_token %}
+                <img src="{% static 'bullbeer.png' %}" alt="" height="57" width="72" class="mt-5 mb-4">
+                <h3 class="mb-3 font-weight-normal">Please Signin</h3>
+                <div class="form-floating">
+                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="username">
+                    <label for="floatingInput">Enter Username
+                    </label><br>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password1" class="form-control" id="floatingInput"
+                        placeholder="password"><label for="floatingInput">Enter Password</label><br>
+                </div>
+                <div class="mt-2">
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Signin</button>
+                </div>
+                <p class="text-start mt-3"><a href="/password_reset_form">Forgot Password? </a></p>
+                <p class="text-start mt-0">Don't Have account? <a href="/Signup"> Register Here</a></p>
+                <p class="mt-5 mt-3 text-muted">&copy; 2021-2022</p>
+                <div>
+                    {% for message in messages %}
+                    <h3>{{message}}</h3>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
